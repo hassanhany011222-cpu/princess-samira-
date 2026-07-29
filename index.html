@@ -1,40 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Para Mi Princesa ❤️</title>
 
-<link rel="stylesheet" href="style.css">
+<meta name="theme-color" content="#ff5fa2">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<!-- Pantalla de contraseña -->
+<div id="loadingScreen">
 
-<div id="loginPage">
-
-<div class="glass">
+<div class="glassCard">
 
 <h1>❤️ Bienvenida Mi Princesa ❤️</h1>
 
 <p>
 
-Este pequeño rincón fue creado solamente para ti.
+Antes de entrar...
+
+escribe nuestra contraseña secreta.
 
 </p>
 
 <input
+
 type="password"
+
 id="password"
-placeholder="Ingresa la contraseña">
+
+placeholder="Contraseña">
 
 <button onclick="checkPassword()">
 
@@ -48,35 +57,41 @@ Entrar ❤️
 
 </div>
 
-<!-- Página principal -->
-
 <div id="mainPage">
+
+<div id="backgroundHearts"></div>
 
 <header>
 
 <h1>
 
-Para la mujer más hermosa del mundo ❤️
+Para la mujer más hermosa del universo ❤️
 
 </h1>
 
 <p>
 
-Cada segundo contigo vale toda una vida.
+Creé este pequeño rincón solo para ti.
 
 </p>
 
 </header>
 
-<section class="content">
+<section class="hero">
 
-<div class="photoBox">
+<div class="photoArea">
 
-<img src="photo.jpg" alt="Mi Amor">
+<div class="photoFrame">
+
+<img src="photo.jpg"
+
+alt="Mi Amor">
 
 </div>
 
-<div class="letterBox">
+</div>
+
+<div class="letterArea">
 
 <h2>
 
@@ -86,7 +101,79 @@ Mi querida princesa 💖
 
 <div class="letter">
 
-<!-- PEGA AQUÍ TU CARTA -->
+<p>
+
+Entre todas las personas que he conocido,
+eres tú quien le dio paz a mi corazón.
+Contigo me siento tranquilo, seguro y feliz.
+No sé cómo pasó, pero llegaste a ser la persona con la que más cómodo me siento.
+
+</p>
+
+<p>
+
+Te amo de verdad,
+y si algún día me preguntaran a quién elegiría para compartir mi vida,
+mi respuesta siempre sería la misma:
+<b>a ti.</b>
+
+Te elegí con todo mi corazón,
+porque eres la mujer con la que sueño construir un hogar,
+compartir mis alegrías y mis tristezas,
+y a quien deseo llamar mi esposa.
+
+</p>
+
+<p>
+
+No quiero a nadie más.
+
+Mi corazón ya hizo su elección,
+
+y esa elección eres tú.
+
+</p>
+
+<h3>
+
+Versos ❤️
+
+</h3>
+
+<p>
+
+Te elegí entre millones de personas,
+
+porque mi corazón encontró en el tuyo su hogar.
+
+</p>
+
+<p>
+
+No busco un destino diferente,
+
+porque mi destino siempre será caminar a tu lado.
+
+</p>
+<p>
+
+Eres mi paz,
+
+mi lugar favorito
+
+y el amor con el que quiero compartir toda mi vida.
+
+</p>
+
+<h3>
+
+Con todo mi amor,
+
+<br><br>
+
+Tu amado Hassan ❤️
+
+</h3>
 
 </div>
 
@@ -102,11 +189,67 @@ Mi querida princesa 💖
 
 </h2>
 
-<div id="timer"></div>
+<p class="subtitle">
+
+Cada segundo contigo es el regalo más hermoso de mi vida.
+
+</p>
+
+<div id="timer">
+
+<div class="timeBox">
+<span class="timeValue">0</span>
+<span class="timeLabel">Años</span>
+</div>
+
+<div class="timeBox">
+<span class="timeValue">0</span>
+<span class="timeLabel">Meses</span>
+</div>
+
+<div class="timeBox">
+<span class="timeValue">0</span>
+<span class="timeLabel">Días</span>
+</div>
+
+<div class="timeBox">
+<span class="timeValue">0</span>
+<span class="timeLabel">Horas</span>
+</div>
+
+<div class="timeBox">
+<span class="timeValue">0</span>
+<span class="timeLabel">Minutos</span>
+</div>
+
+<div class="timeBox">
+<span class="timeValue">0</span>
+<span class="timeLabel">Segundos</span>
+</div>
+
+</div>
 
 </section>
 
-<section class="buttonSection">
+<section class="loveSection">
+
+<h2>
+
+Siempre serás mi lugar favorito ❤️
+
+</h2>
+
+<p>
+
+Prometo cuidar de tu corazón,
+
+hacerte sonreír,
+
+acompañarte en cada paso,
+
+y amarte todos los días de mi vida.
+
+</p>
 
 <button id="loveButton">
 
@@ -120,20 +263,17 @@ Te amaré para siempre ❤️
 
 <p>
 
-Con todo mi amor...
-
-Hassan ❤️
+Creado con todo mi amor para ti ❤️
 
 </p>
 
 </footer>
 
-<audio
-id="music"
-loop>
+<audio id="music" loop>
 
-<source src="music.mp3"
-type="audio/mpeg">
+<source src="music.mp3" type="audio/mpeg">
+
+Tu navegador no soporta audio.
 
 </audio>
 
@@ -142,4 +282,5 @@ type="audio/mpeg">
 <script src="script.js"></script>
 
 </body>
+
 </html>
