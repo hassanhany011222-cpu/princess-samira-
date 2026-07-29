@@ -38,9 +38,15 @@ loginScreen.style.display="none";
 
 mainPage.style.display="block";
 
-music.volume=.5;
+music.pause();
+music.currentTime = 0;
+music.volume = 1;
 
-music.play().catch(()=>{});
+music.play().then(() => {
+    console.log("Music started");
+}).catch((err) => {
+    console.error("Music error:", err);
+});
 
 startCounter();
 
