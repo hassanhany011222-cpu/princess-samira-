@@ -906,28 +906,40 @@ margin-top:5px;
 
 font-size:58px;
 font-weight:900;
+letter-spacing:3px;
+
 margin:15px 0;
 
 background:linear-gradient(
-90deg,
-#ff8fcf,
-#ffffff,
-#ffd700,
-#ff8fcf
+180deg,
+#fff6b7 0%,
+#ffd700 35%,
+#ffb300 60%,
+#fff1a8 100%
 );
 
 -webkit-background-clip:text;
 background-clip:text;
 
 color:transparent;
-
 -webkit-text-fill-color:transparent;
 
+/* تأثير ثلاثي الأبعاد */
 text-shadow:
-0 0 15px rgba(255,105,180,.8),
-0 0 35px rgba(255,20,147,.6);
 
-animation:nameGlow 2s infinite;
+0 2px 0 #b8860b,
+0 4px 0 #8b6508,
+0 6px 15px rgba(255,215,0,.8),
+
+0 0 20px rgba(255,215,0,.9),
+0 0 40px rgba(255,105,180,.7);
+
+/* لمعان متحرك */
+animation:
+goldGlow 2.5s infinite;
+
+position:relative;
+z-index:2;
 
 }
 
@@ -1049,6 +1061,29 @@ box-shadow:0 20px 60px rgba(255,20,147,.55);
 
 box-shadow:0 10px 30px rgba(255,20,147,.25);
 
+}
+
+}
+@keyframes goldGlow{
+
+0%{
+transform:scale(1);
+filter:brightness(1);
+}
+
+50%{
+transform:scale(1.06);
+filter:brightness(1.4);
+
+text-shadow:
+0 3px 0 #b8860b,
+0 6px 20px gold,
+0 0 50px hotpink;
+}
+
+100%{
+transform:scale(1);
+filter:brightness(1);
 }
 
 }
