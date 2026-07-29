@@ -843,3 +843,43 @@ font-size:15px;
 }
 
 }
+.photoName{
+
+text-align:center;
+
+font-size:32px;
+
+font-weight:bold;
+
+color:white;
+
+margin-bottom:18px;
+
+text-shadow:
+0 0 10px rgba(255,255,255,.8),
+0 0 20px hotpink;
+
+letter-spacing:2px;
+
+animation:glowName 2s infinite;
+
+}
+
+@keyframes glowName{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.05);
+text-shadow:
+0 0 20px #fff,
+0 0 40px hotpink;
+}
+
+100%{
+transform:scale(1);
+}
+
+}
