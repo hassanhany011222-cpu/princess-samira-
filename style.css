@@ -905,20 +905,27 @@ margin-top:5px;
 .namePrincess{
 
 font-size:58px;
-
-font-weight:bold;
-
+font-weight:900;
 margin:15px 0;
 
-background:linear-gradient(90deg,#ffffff,#ffd3e6,#ffffff);
+background:linear-gradient(
+90deg,
+#ff8fcf,
+#ffffff,
+#ffd700,
+#ff8fcf
+);
 
 -webkit-background-clip:text;
+background-clip:text;
+
+color:transparent;
 
 -webkit-text-fill-color:transparent;
 
 text-shadow:
-0 0 20px hotpink,
-0 0 40px hotpink;
+0 0 15px rgba(255,105,180,.8),
+0 0 35px rgba(255,20,147,.6);
 
 animation:nameGlow 2s infinite;
 
