@@ -1,0 +1,376 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(135deg,#ffb6d9,#ff8fb8,#ffd8ea);
+overflow-x:hidden;
+color:white;
+}
+
+/* شاشة كلمة السر */
+
+#loginPage{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:
+linear-gradient(rgba(255,105,180,.35),rgba(255,105,180,.35)),
+url("https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+z-index:999;
+transition:1s;
+}
+
+.glass{
+width:420px;
+padding:45px;
+text-align:center;
+border-radius:30px;
+backdrop-filter:blur(20px);
+background:rgba(255,255,255,.18);
+border:1px solid rgba(255,255,255,.35);
+box-shadow:0 20px 60px rgba(0,0,0,.25);
+animation:fadeUp 1.2s;
+}
+
+.glass h1{
+font-size:34px;
+margin-bottom:20px;
+}
+
+.glass p{
+font-size:17px;
+margin-bottom:20px;
+line-height:1.7;
+}
+
+.glass input{
+width:100%;
+padding:16px;
+border:none;
+border-radius:14px;
+outline:none;
+font-size:18px;
+margin-bottom:18px;
+}
+
+.glass button{
+width:100%;
+padding:15px;
+border:none;
+border-radius:14px;
+cursor:pointer;
+font-size:19px;
+font-weight:600;
+background:#ff3f83;
+color:white;
+transition:.4s;
+}
+
+.glass button:hover{
+transform:scale(1.05);
+background:#ff1468;
+}
+
+#error{
+margin-top:15px;
+color:#ffecec;
+font-size:16px;
+}
+
+/* الصفحة الرئيسية */
+
+#mainPage{
+display:none;
+animation:fadeIn 1.5s;
+}
+
+header{
+padding:70px 20px;
+text-align:center;
+}
+
+header h1{
+font-size:55px;
+margin-bottom:15px;
+text-shadow:0 0 15px rgba(255,255,255,.6);
+}
+
+header p{
+font-size:22px;
+opacity:.95;
+}
+
+.content{
+max-width:1400px;
+margin:auto;
+display:flex;
+gap:60px;
+align-items:center;
+justify-content:center;
+padding:40px;
+flex-wrap:wrap;
+}
+
+.photoBox{
+flex:1;
+display:flex;
+justify-content:center;
+}
+
+.photoBox img{
+width:420px;
+max-width:100%;
+border-radius:30px;
+border:8px solid rgba(255,255,255,.35);
+box-shadow:0 20px 50px rgba(0,0,0,.35);
+transition:.5s;
+}
+
+.photoBox img:hover{
+transform:scale(1.04) rotate(-1deg);
+}
+
+.letterBox{
+flex:1;
+min-width:320px;
+background:rgba(255,255,255,.18);
+backdrop-filter:blur(16px);
+padding:40px;
+border-radius:25px;
+box-shadow:0 15px 40px rgba(0,0,0,.2);
+}
+
+.letterBox h2{
+font-size:36px;
+margin-bottom:25px;
+}
+
+.letter{
+font-size:20px;
+line-height:2;
+text-align:left;
+}
+/* ========================= */
+/* Counter Section */
+/* ========================= */
+
+.counterSection{
+    width:90%;
+    max-width:1200px;
+    margin:70px auto;
+    text-align:center;
+}
+
+.counterSection h2{
+    font-size:38px;
+    margin-bottom:35px;
+    text-shadow:0 0 15px rgba(255,255,255,.6);
+}
+
+#timer{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
+.timeBox{
+    width:140px;
+    padding:25px;
+    border-radius:25px;
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(15px);
+    box-shadow:0 15px 30px rgba(0,0,0,.25);
+    transition:.4s;
+}
+
+.timeBox:hover{
+    transform:translateY(-8px);
+}
+
+.timeBox span{
+    display:block;
+}
+
+.timeValue{
+    font-size:42px;
+    font-weight:bold;
+}
+
+.timeLabel{
+    margin-top:10px;
+    font-size:18px;
+}
+
+/* ========================= */
+/* Love Button */
+/* ========================= */
+
+.buttonSection{
+    text-align:center;
+    margin:80px 0;
+}
+
+#loveButton{
+    padding:20px 60px;
+    border:none;
+    border-radius:60px;
+    background:#ff2d75;
+    color:white;
+    font-size:24px;
+    cursor:pointer;
+    transition:.4s;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+#loveButton:hover{
+    transform:scale(1.08);
+    background:#ff0f61;
+}
+
+/* ========================= */
+/* Footer */
+/* ========================= */
+
+footer{
+    text-align:center;
+    padding:50px;
+    font-size:20px;
+    opacity:.9;
+}
+
+/* ========================= */
+/* Floating Hearts */
+/* ========================= */
+
+body::before,
+body::after{
+    content:"❤️";
+    position:fixed;
+    font-size:30px;
+    animation:heartFloat 12s linear infinite;
+    opacity:.5;
+}
+
+body::before{
+    left:10%;
+    bottom:-50px;
+}
+
+body::after{
+    right:15%;
+    bottom:-100px;
+    animation-delay:5s;
+}
+
+@keyframes heartFloat{
+
+0%{
+transform:translateY(0) scale(.8) rotate(0deg);
+opacity:0;
+}
+
+20%{
+opacity:.8;
+}
+
+80%{
+opacity:.8;
+}
+
+100%{
+transform:translateY(-120vh) scale(1.5) rotate(360deg);
+opacity:0;
+}
+
+}
+
+/* ========================= */
+/* Animations */
+/* ========================= */
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(30px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(80px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* ========================= */
+/* Responsive */
+/* ========================= */
+
+@media(max-width:900px){
+
+header h1{
+font-size:38px;
+}
+
+.content{
+flex-direction:column;
+padding:20px;
+}
+
+.photoBox img{
+width:320px;
+}
+
+.letter{
+font-size:18px;
+}
+
+.counterSection h2{
+font-size:28px;
+}
+
+.timeBox{
+width:120px;
+padding:20px;
+}
+
+.timeValue{
+font-size:34px;
+}
+
+#loveButton{
+width:90%;
+font-size:20px;
+}
+
+}
