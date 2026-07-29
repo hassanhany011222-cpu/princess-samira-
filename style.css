@@ -843,43 +843,205 @@ font-size:15px;
 }
 
 }
-.photoName{
+/*==========================
+ROYAL PRINCESS CARD
+==========================*/
+
+.royalCard{
+
+width:100%;
+
+max-width:430px;
+
+margin:0 auto 25px;
+
+padding:25px;
+
+border-radius:28px;
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(20px);
+
+border:2px solid rgba(255,255,255,.3);
 
 text-align:center;
 
-font-size:32px;
+position:relative;
+
+overflow:hidden;
+
+box-shadow:
+0 10px 40px rgba(255,20,147,.25);
+
+animation:cardGlow 3s infinite;
+
+}
+
+.crown{
+
+font-size:65px;
+
+margin-top:-45px;
+
+animation:floatCrown 2s ease-in-out infinite;
+
+}
+
+.titlePrincess{
+
+font-size:22px;
+
+letter-spacing:8px;
+
+font-weight:700;
+
+color:#ffe59e;
+
+margin-top:5px;
+
+}
+
+.namePrincess{
+
+font-size:58px;
 
 font-weight:bold;
 
+margin:15px 0;
+
+background:linear-gradient(90deg,#ffffff,#ffd3e6,#ffffff);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+text-shadow:
+0 0 20px hotpink,
+0 0 40px hotpink;
+
+animation:nameGlow 2s infinite;
+
+}
+
+.subtitlePrincess{
+
+font-size:22px;
+
 color:white;
 
-margin-bottom:18px;
+font-style:italic;
 
-text-shadow:
-0 0 10px rgba(255,255,255,.8),
-0 0 20px hotpink;
-
-letter-spacing:2px;
-
-animation:glowName 2s infinite;
+margin-top:10px;
 
 }
 
-@keyframes glowName{
+/* Shine */
+
+.royalCard::before{
+
+content:"";
+
+position:absolute;
+
+top:-150%;
+
+left:-40%;
+
+width:45%;
+
+height:400%;
+
+background:rgba(255,255,255,.3);
+
+transform:rotate(30deg);
+
+animation:shine 5s infinite;
+
+}
+
+@keyframes shine{
 
 0%{
-transform:scale(1);
-}
 
-50%{
-transform:scale(1.05);
-text-shadow:
-0 0 20px #fff,
-0 0 40px hotpink;
+left:-60%;
+
 }
 
 100%{
+
+left:150%;
+
+}
+
+}
+
+@keyframes nameGlow{
+
+0%{
+
 transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.05);
+
+text-shadow:
+0 0 25px white,
+0 0 50px hotpink;
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+@keyframes floatCrown{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes cardGlow{
+
+0%{
+
+box-shadow:0 10px 30px rgba(255,20,147,.25);
+
+}
+
+50%{
+
+box-shadow:0 20px 60px rgba(255,20,147,.55);
+
+}
+
+100%{
+
+box-shadow:0 10px 30px rgba(255,20,147,.25);
+
 }
 
 }
